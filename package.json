@@ -1,0 +1,18 @@
+{
+  "name": "CoderCalendar",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node_modules/react-native/packager/packager.sh",
+    "setup": "cd node_modules; find . -name .babelrc | grep -v packager | xargs rm"
+  },
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-native": "^0.22.2",
+    "immutable": "^3.7.5",
+    "react-native-device-info": "^0.9.0",
+    "react-redux": "^4.4.1",
+    "redux": "^3.3.1",
+    "redux-thunk": "^2.0.1"
+  }
+}
