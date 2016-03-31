@@ -1,5 +1,6 @@
 'use strict'
 import React from 'react-native'
+import coderUtils from '../utils/coderUtils'
 var {
   Component,
   StyleSheet,
@@ -16,7 +17,7 @@ class HomeView extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.storyTitle}>
-              今天是2016年3月29日 星期二
+              {coderUtils.getTodayString()}
         </Text>
 
         <View style={styles.yi}>
