@@ -15,34 +15,76 @@ class HomeView extends Component {
   render() {
     return (
       <View style={styles.container}>
-      <Text style={styles.storyTitle}>
-            今天是2016年3月29日 星期二
+        <Text style={styles.storyTitle}>
+              今天是2016年3月29日 星期二
         </Text>
-        <View style={styles.height50,styles.row}>
-            <View style={styles.height160,styles.part_1_left,{backgroundColor:'#55A44B'}}>
-               <Text style={styles.storyTitle}>
-              宜
-              </Text>
-            </View>
-            <View style={styles.height160,styles.part_1_right,{backgroundColor:'#FF3F0D'}}>
-              <Text style={styles.storyTitle}>
-            写单元测试œ
+
+        <View style={styles.yi}>
+          <View style={[styles.tag,{backgroundColor:'#ffee44'}]}>
+            <Text style={styles.tag_text}>
+             宜
             </Text>
-            </View>
           </View>
-           <View style={styles.height50,styles.row}>
-            <View style={styles.height160,styles.part_1_left}>
-               <Text style={styles.storyTitle}>
-              不宜
-              </Text>
-            </View>
-            <View style={styles.height160,styles.part_1_right}>
-              <Text style={styles.storyTitle}>
-            发版本
+          <View style={[styles.tagContent,{backgroundColor:'#ffffaa'}]}>
+             <Text style={styles.tip}>
+             写单元测试
             </Text>
-            </View>
+             <Text style={styles.tip_text}>
+             写单元测试将减少出错
+            </Text>
+             <Text style={styles.tip}>
+             抽烟
+            </Text>
+             <Text style={styles.tip_text}>
+            抽烟有利于提神，增加思维敏捷
+            </Text>
+             <Text style={styles.tip}>
+             白天上线
+            </Text>
+             <Text style={styles.tip_text}>
+             今天白天上线是安全的
+            </Text>
           </View>
         </View>
+
+         <View style={styles.yi}>
+          <View style={[styles.tag,{backgroundColor:'#ff4444'}]}>
+            <Text style={[styles.tag_text,{color:'#FFFFFF'}]}>
+             不宜
+            </Text>
+          </View>
+          <View style={[styles.tagContent,{backgroundColor:'#ffddd3'}]}>
+             <Text style={styles.tip}>
+             跳槽
+            </Text>
+             <Text style={styles.tip_text}>
+             鉴于当前的经济形势，你的下一份工作未必比现在强
+            </Text>
+             <Text style={styles.tip}>
+             撸管
+            </Text>
+             <Text style={styles.tip_text}>
+            强撸灰飞烟灭
+            </Text>
+             <Text style={styles.tip}>
+             开会
+            </Text>
+             <Text style={styles.tip_text}>
+             小心被扣屎盆子背黑锅
+            </Text>
+          </View>
+        </View>
+
+         <Text style={styles.special_point}>
+             座位朝向：面向北方写程序，BUG 最少。
+         </Text>
+        <Text style={styles.special_point}>
+             今日宜饮：水，奶茶
+         </Text>
+          <Text style={styles.special_point}>
+            女神亲近指数：★★★★★
+         </Text>
+      </View>
     )
   }
 }
@@ -51,8 +93,31 @@ var styles = StyleSheet.create({
   row: {
     flexDirection: 'row'
   },
-  height50: {
-    height: 50
+  yi: {
+    flexDirection: 'row',
+    flex:1,
+  },
+  tag:{
+    flex:1,
+    alignItems:'center',
+    justifyContent:'center'
+  },
+  tagContent:{
+    flex:2,
+    flexDirection: 'column',
+    padding:15
+  },
+  tag_text:{
+    fontSize:40,
+    color:'#000000'
+  },
+  tip:{
+    fontSize:22,
+    color:'#000000'
+  },
+  tip_text:{
+    fontSize:18,
+    color:'#7a7e7c'
   },
   container: {
     flex: 1,
@@ -60,8 +125,17 @@ var styles = StyleSheet.create({
     backgroundColor: '#FAFAFA',
   },
   storyTitle: {
-    fontSize: 30,
+    fontSize: 25,
     color: '#333333',
+    margin:15,
+    alignItems:'center',
+    justifyContent:'center'
+  },
+  special_point:{
+     fontSize:18,
+    color:'#7a7e7c',
+    marginLeft:15,
+    marginRight:15
   },
   marTop18: {
     marginTop: 18,
