@@ -15,6 +15,7 @@
    - Clone this repo git clone git@github.com:xujinyang/CoderCalendar.git
    - cd CoderCalendar
    - run npm install
+
 #### Android
 - Run android avd and start an emulator
 - Run react-native run-android
