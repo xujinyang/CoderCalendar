@@ -103,6 +103,7 @@ var styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     backgroundColor: '#FAFAFA',
+    paddingBottom:8
   },
   storyTitle: {
     fontSize: 25,
