@@ -14,12 +14,12 @@ class HomeView extends Component {
   }
 
   render() {
-    var totalList=coderUtils.getTotalObject();
-    console.log(totalList)
+    var totalObject=coderUtils.getTotalObject();
+    console.log(totalObject)
     return (
       <View style={styles.container}>
         <Text style={styles.storyTitle}>
-              {coderUtils.getTodayString()}
+              {totalObject.today}
         </Text>
         <View style={styles.yi}>
           <View style={[styles.tag,{backgroundColor:'#ffee44'}]}>
@@ -28,7 +28,7 @@ class HomeView extends Component {
             </Text>
           </View>
           <View style={[styles.tagContent,{backgroundColor:'#ffffaa'}]}>
-             {this._getItemView(totalList.goodList)}
+             {this._getItemView(totalObject.goodList)}
           </View>
         </View>
 
@@ -39,18 +39,18 @@ class HomeView extends Component {
             </Text>
           </View>
           <View style={[styles.tagContent,{backgroundColor:'#ffddd3'}]}>
-            {this._getItemView(totalList.badList)}
+            {this._getItemView(totalObject.badList)}
           </View>
         </View>
 
          <Text style={styles.special_point}>
-             座位朝向：面向{totalList.direction}写程序，BUG 最少。
+             座位朝向：面向{totalObject.direction}写程序，BUG 最少。
          </Text>
         <Text style={styles.special_point}>
-             今日宜饮：{totalList.drinks}
+             今日宜饮：{totalObject.drinks}
          </Text>
           <Text style={styles.special_point}>
-            女神亲近指数：{totalList.stars}
+            女神亲近指数：{totalObject.stars}
          </Text>
       </View>
     )

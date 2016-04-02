@@ -161,6 +161,7 @@ const coderUtils = {
 				badList.push(eventArr[numGood + i]);
 			}
 			var totalList = {
+				"today":coderUtils.getTodayString(),
 				"goodList": goodList,
 				"badList": badList,
 				"direction": directions[coderUtils.random(iday, 2) % directions.length],
