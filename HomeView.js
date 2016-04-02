@@ -1,6 +1,6 @@
 'use strict'
 import React from 'react-native'
-import coderUtils from '../utils/coderUtils'
+import coderUtils from './coderUtils'
 var {
   Component,
   StyleSheet,
@@ -44,13 +44,13 @@ class HomeView extends Component {
         </View>
 
          <Text style={styles.special_point}>
-             座位朝向：面向北方写程序，BUG 最少。
+             座位朝向：面向{totalList.direction}写程序，BUG 最少。
          </Text>
         <Text style={styles.special_point}>
-             今日宜饮：水，奶茶
+             今日宜饮：{totalList.drinks}
          </Text>
           <Text style={styles.special_point}>
-            女神亲近指数：★★★★★
+            女神亲近指数：{totalList.stars}
          </Text>
       </View>
     )
