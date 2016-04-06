@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react-native';
-import HomeView from './HomeView';
+import HomeView from './LifeView';
 
 var {
   AppRegistry,

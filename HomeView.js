@@ -55,6 +55,7 @@ class HomeView extends Component {
       </View>
     )
   }
+  
 _getItemView(contentList){
   return contentList.map((item,index) =>(
     <View style={{flex:1,flexDirection: 'column'}}>
